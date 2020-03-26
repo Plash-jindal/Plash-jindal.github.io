@@ -1,5 +1,20 @@
 <html>
-  <head> </head>
+  <head> 
+  <script>
+    const observer = new PerformanceObserver((list) => {
+
+        for (const entry of list.getEntries()) {
+
+            // Attribution entry including "containerSrc":"https://example.com"
+            console.log(JSON.stringify(entry.attribution));
+
+        }
+
+    });
+
+    observer.observe({ entryTypes: ['longtask'] });
+</script>
+  </head>
   <body>
     Hello
     <iframe
