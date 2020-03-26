@@ -1,23 +1,11 @@
 <html>
   <head> 
-  <script>
-    const observer = new PerformanceObserver((list) => {
-
-        for (const entry of list.getEntries()) {
-
-            // Attribution entry including "containerSrc":"https://example.com"
-            console.log(JSON.stringify(entry.attribution));
-
-        }
-
-    });
-
-    observer.observe({ entryTypes: ['longtask'] });
-</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/css/bootstrap.min.css" integrity="sha256-Mp5MUgb8cjkGtTftnq3keEVxsByE6WQlymfB/r46CCU=" crossorigin="anonymous" />
   </head>
   <body>
-    Hello
-    <iframe
+    <header>
+  <div class="overlay"></div>
+  <iframe
       src="https://maxstream-qa.ocs.demo.accedo.tv/embed/52486136536d3434384d342b4e57384f6b74653541673d3d"
       style="border:0px #ffffff none;"
       name="myiFrame"
@@ -29,6 +17,14 @@
       width="600px"
       allowfullscreen
     ></iframe>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">This is a Testing Website for iFrame Feature</h1>
+      </div>
+    </div>
+  </div>
+</header>
   </body>
 </html>
 
